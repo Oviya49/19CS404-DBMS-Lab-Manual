@@ -8,6 +8,7 @@
 
 
 ## Entities and Attributes:
+```
 ### 1.Student:
 ->StudentID (Primary Key)
 ->Name
@@ -42,8 +43,9 @@
 ->Units
 ->PrereqCourseID
 ->PrereqCourseName
-
+```
 ## Relationships and Constraints:
+```
 ### 1.Programs - Student:
 ->1 Program has many Students (1:N).
 ->Participation: Total on Student side (each Student must be enrolled in a Program).
@@ -60,8 +62,9 @@
 ### 5.Courses - Prerequisites:
 ->1 Course can have zero or more Prerequisite Courses (1:N).
 ->Participation: Partial on Course side (Prerequisite is optional.)
-
+```
 ## Extension (Prerequisite / Billing):
+```
 ### 1.Prerequisite Modeling:
 ->You created a separate Prerequisites entity that maps a Course to its Prerequisite Course using:
 ->CourseID and PrereqCourseID.
@@ -69,8 +72,9 @@
 ### 2.Billing:
 ->Billing is not modeled directly in your diagram.
 ->(If needed, you could add a Billing entity linked to StudentID later.)
-
+```
 ## Design Choices:
+```
 ->Programs entity was added to group Students under a department/program.
 ->Used Enrollment as an associative entity because there is a many-to-many relationship between Students and Courses, and Enrollment captures the extra attribute Date (when they enrolled).
 ->Prerequisites were separated as an independent entity rather than recursive relationship for clarity, making it easier to store additional details about prerequisite courses.
@@ -79,3 +83,4 @@
 ->Each Course can have multiple Students enrolled.
 ->Each Course can be taught by only one Professor at a time.
 ->Students must be enrolled in a Program but not necessarily enrolled in a Course immediately.
+```
