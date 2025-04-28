@@ -1,7 +1,6 @@
 # ER Diagram Submission - Oviya N
 
-## Scenario Chosen:
-## University  
+## Scenario Chosen: University  
 
 ## ER Diagram:
 ![image](https://github.com/user-attachments/assets/e13200c3-547c-4483-93b1-bca725c2bc37)
@@ -95,13 +94,19 @@
 ->(If needed, you could add a Billing entity linked to StudentID later.)
 ```
 ## Design Choices:
-```
 ->Programs entity was added to group Students under a department/program.
+
 ->Used Enrollment as an associative entity because there is a many-to-many relationship between Students and Courses, and Enrollment captures the extra attribute Date (when they enrolled).
+
 ->Prerequisites were separated as an independent entity rather than recursive relationship for clarity, making it easier to store additional details about prerequisite courses.
+
 ->Contact Information (PhoneNo and Email) was stored under ContactInfo attribute group to avoid redundancy across Student and Professor entities.
+
 ->Assumed:
+
 ->Each Course can have multiple Students enrolled.
+
 ->Each Course can be taught by only one Professor at a time.
+
 ->Students must be enrolled in a Program but not necessarily enrolled in a Course immediately.
 ```
