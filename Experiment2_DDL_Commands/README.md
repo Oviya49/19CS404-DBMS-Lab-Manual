@@ -103,7 +103,7 @@ CREATE TABLE Table_Name (
 );
 ```
 
-**Question 1 : **
+Question 1 : 
 ---
 Create a table named ProjectAssignments with the following constraints:
 AssignmentID as INTEGER should be the primary key.
@@ -126,7 +126,7 @@ foreign key(ProjectID) references Projects(ProjectID)
 **Output:**
 ![image](https://github.com/user-attachments/assets/250a93d9-a753-4799-b4a3-fc44cea27114)
 
-**Question 2 : **
+Question 2 : 
 ---
 Write a SQL query to Add a new column State as text in the Student_details table.
 ```
@@ -149,7 +149,7 @@ ADD column State TEXT;
 **Output:**
 ![image](https://github.com/user-attachments/assets/14dcfcf1-40bc-401b-8649-936a4fce8e27)
 
-**Question 3 : **
+Question 3 : 
 ---
 create a table named jobs including columns job_id, job_title, min_salary and max_salary, and make sure that, the default value for job_title is blank and min_salary is 8000 and max_salary is NULL will be entered automatically at the time of insertion if no value assigned for the specified columns.
 ## SQL Code:
@@ -165,7 +165,7 @@ max_salary integer default null
 **Output:**
 ![image](https://github.com/user-attachments/assets/93a950ce-4c39-46f2-979e-aad2c6503e89)
 
-**Question 4 : **
+Question 4 : 
 ---
 Write a SQL Query  to add attribute ISBN as varchar(30) and domain_dept as varchar(30) in the table 'books'
 
@@ -181,7 +181,7 @@ Add column domain_dept varchar(30);
 **Output:**
 ![image](https://github.com/user-attachments/assets/143a9a13-3b8d-4af0-bcc6-9308a143819e)
 
-**Question 5 : **
+Question 5 : 
 ---
 Insert the following customers into the Customers table:
 ```
@@ -200,7 +200,7 @@ values(302,'Laura Croft','456 Elm St','Seattle',98101),
 **Output:**
 ![image](https://github.com/user-attachments/assets/1af68e0c-c25c-4e1a-aa55-a34a3650e4b7)
 
-**Question 6 : **
+Question 6 : 
 ---
 Create a table named Products with the following constraints:
 
@@ -221,7 +221,7 @@ Stock INTEGER CHECK(Stock>=0)
 **Output:**
 ![image](https://github.com/user-attachments/assets/4a58a970-a937-4657-9342-b20fd8c51676)
 
-**Question 7 : **
+Question 7 : 
 ---
 Create a table named Tasks with the following columns:
 ```
@@ -241,7 +241,7 @@ DueDate DATE
 **Output:**
 ![image](https://github.com/user-attachments/assets/f56ab494-b2c5-4243-815c-6fe9fa5548c0)
 
-**Question 8 : **
+Question 8 : 
 ---
 Insert all products from Discontinued_products into Products.
 
@@ -256,7 +256,7 @@ SELECT ProductID,ProductName,Price,Stock FROM Discontinued_products;
 ![image](https://github.com/user-attachments/assets/cebcc727-1298-49c3-8ab9-e6c74dc5d74d)
 
 
-**Question 9 : **
+Question 9 : 
 ---
 Insert a book with ISBN 978-1234567890, Title Data Science Essentials, Author Jane Doe, Publisher TechBooks, and Year 2024 into the Books table.
 ## SQL Code:
@@ -268,7 +268,7 @@ values("978-1234567890","Data Science Essentials","Jane Doe","TechBooks",2024);
 **Output:**
 ![image](https://github.com/user-attachments/assets/d243dff6-8ae6-4a2c-a240-f1c98df39551)
 
-**Question 10 : **
+Question 10 : 
 ---
 Create a new table named item with the following specifications and constraints:
 item_id as TEXT and as primary key.
