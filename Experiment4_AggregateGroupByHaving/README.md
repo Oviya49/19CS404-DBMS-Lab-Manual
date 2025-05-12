@@ -226,7 +226,10 @@ where city='Noida';
 **Output:**
 ![image](https://github.com/user-attachments/assets/04e98da2-e773-4544-8c2b-6bdca5090687)
 
+## Screenshot of Module 3 SEB Completion Grades:
 
+
+![image](https://github.com/user-attachments/assets/7e896023-d041-422f-a061-ba85ecb52d36)
 
 
 
