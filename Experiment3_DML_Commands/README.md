@@ -277,6 +277,8 @@ where strftime("%w",hiredate) in('0','6');
 ```
 ## Output:
 ![image](https://github.com/user-attachments/assets/78931931-6ab9-414d-80e8-6c9b638993bd)
+## Screenshot of Module 1 SEB Completion Grades:
+![Screenshot 2025-05-12 103335](https://github.com/user-attachments/assets/9a7cc7aa-4e71-4c83-97f9-e08d41471de5)
 
 ## RESULT
 Thus, the SQL queries to implement DML commands have been executed successfully.
