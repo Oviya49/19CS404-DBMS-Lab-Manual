@@ -37,6 +37,7 @@ DROP VIEW view_name;
 ```
 
 **Question 1**
+---
 Write a SQL query to List departments with names longer than the average length
 Departments Table (attributes: department_id, department_name)
 ![image](https://github.com/user-attachments/assets/601b7491-6659-406c-b3ef-09a48970ea30)
@@ -55,6 +56,7 @@ WHERE LENGTH(department_name) > (
 
 
 **Question 2**
+---
 Write a SQL query to Retrieve the medications with dosages equal to the lowest dosage
 Table Name: Medications (attributes: medication_id, medication_name, dosage)
 ![image](https://github.com/user-attachments/assets/b3ce9e5e-6c7e-4df8-b7bb-ff451f1b5528)
@@ -73,6 +75,7 @@ WHERE dosage = (
 
 
 **Question 3**
+---
 Write a SQL query to Identify customers whose city is different from the city of the customer with the highest ID
 SAMPLE TABLE: customer
 ~~~
@@ -100,6 +103,7 @@ WHERE city <> (
 
 
 **Question 4**
+---
 Write a SQL query to Retrieve the names of customers who have a phone number that is not shared with any other customer.
 SAMPLE TABLE: customer
 ~~~
@@ -128,6 +132,7 @@ WHERE phone IN (
 
 
 **Question 5**
+---
 Write a SQL query that retrieve all the columns from the table "Grades", where the grade is equal to the maximum grade achieved in each subject.
 
 Sample table: GRADES (attributes: student_id, student_name, subject, grade)
@@ -147,6 +152,7 @@ WHERE grade = (
 ![image](https://github.com/user-attachments/assets/1622ea28-49bc-4fa5-9237-a65aab635a0e)
 
 **Question 6**
+---
 Write a SQL query to retrieve all columns from the CUSTOMERS table for customers whose Address as Delhi
 
 Sample table: CUSTOMERS
@@ -174,6 +180,7 @@ WHERE ADDRESS = 'Delhi';
 ![image](https://github.com/user-attachments/assets/400b166d-7512-49dc-9eb6-aca2ca7714b8)
 
 **Question 7**
+---
 Write a SQL query to Retrieve the names and cities of customers who have the same city as customers with IDs 3 and 7
 
 SAMPLE TABLE: customer
@@ -202,6 +209,7 @@ WHERE city IN (
 ![image](https://github.com/user-attachments/assets/b60183fb-f979-4821-931b-b2f8b297ad78)
 
 **Question 8**
+---
 Write a SQL query that retrieves the names of students and their corresponding grades, where the grade is equal to the maximum grade achieved in each subject.
 Sample table: GRADES
 ![image](https://github.com/user-attachments/assets/bf246299-c6d3-4770-854d-d9c0fdf37cbd)
@@ -223,6 +231,7 @@ where grade =
 
 
 **Question 9**
+---
 Write a SQL query to retrieve all columns from the CUSTOMERS table for customers whose salary is LESS than $2500.
 
 Sample table: CUSTOMERS
@@ -252,6 +261,7 @@ where SALARY < 2500;
 ![image](https://github.com/user-attachments/assets/d7c3e604-6c72-4a2c-a51c-f34c15b61bc7)
 
 **Question 10**
+---
 From the following tables write a SQL query to find the order values greater than the average order value of 10th October 2012. Return ord_no, purch_amt, ord_date, customer_id, salesman_id.
 
 Note: date should be yyyy-mm-dd format
@@ -280,7 +290,8 @@ where purch_amt >
 **Output:**
 
 ![image](https://github.com/user-attachments/assets/4e78fefc-67a9-4d14-84b9-e972e14fd3eb)
-
+## Screenshot of Module 1 SEB Completion Grades:
+![image](https://github.com/user-attachments/assets/66178725-4b1e-4ccd-b9f0-62feecdb0e29)
 
 
 ## RESULT
