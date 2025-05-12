@@ -104,125 +104,187 @@ CREATE TABLE Table_Name (
 ```
 
 **Question 1**
---
--- Paste Question 1 here
+---
+Create a table named ProjectAssignments with the following constraints:
+AssignmentID as INTEGER should be the primary key.
+EmployeeID as INTEGER should be a foreign key referencing Employees(EmployeeID).
+ProjectID as INTEGER should be a foreign key referencing Projects(ProjectID).
+AssignmentDate as DATE should be NOT NULL
+
 
 ```sql
--- Paste your SQL code below for Question 1
+CREATE TABLE ProjectAssignments(
+AssignmentID INTEGER PRIMARY KEY,
+EmployeeID integer,
+ProjectID integer,
+AssignmentDate Date NOT NULL,
+foreign key (EmployeeID) references Employees(EmployeeID),
+foreign key(ProjectID) references Projects(ProjectID)
+);
 ```
 
 **Output:**
-
-![Output1](output.png)
+![image](https://github.com/user-attachments/assets/250a93d9-a753-4799-b4a3-fc44cea27114)
 
 **Question 2**
 ---
--- Paste Question 2 here
+Write a SQL query to Add a new column State as text in the Student_details table.
+
+Sample table: Student_details
+
+ cid              name             type   notnull     dflt_value  pk
+---------------  ---------------  -----  ----------  ----------  ----------
+0                RollNo           int    0                       1
+1                Name             VARCH  1                       0
+2                Gender           TEXT   1                       0
+3                Subject          VARCH  0                       0
+4                MARKS            INT (  0                       0
 
 ```sql
--- Paste your SQL code below for Question 2
+ALTER TABLE Student_details
+ADD column State TEXT;
 ```
 
 **Output:**
-
-![Output2](output.png)
+![image](https://github.com/user-attachments/assets/14dcfcf1-40bc-401b-8649-936a4fce8e27)
 
 **Question 3**
 ---
--- Paste Question 3 here
-
+create a table named jobs including columns job_id, job_title, min_salary and max_salary, and make sure that, the default value for job_title is blank and min_salary is 8000 and max_salary is NULL will be entered automatically at the time of insertion if no value assigned for the specified columns.
 ```sql
--- Paste your SQL code below for Question 3
+create table jobs(
+job_id integer,
+job_title varchar(70) default '',
+min_salary integer default(8000),
+max_salary integer default null
+);
 ```
 
 **Output:**
-
-![Output3](output.png)
+![image](https://github.com/user-attachments/assets/93a950ce-4c39-46f2-979e-aad2c6503e89)
 
 **Question 4**
 ---
--- Paste Question 4 here
+Write a SQL Query  to add attribute ISBN as varchar(30) and domain_dept as varchar(30) in the table 'books'
+
 
 ```sql
--- Paste your SQL code below for Question 4
+Alter table books
+Add column ISBN varchar(30) ;
+Alter table books
+Add column domain_dept varchar(30);
+
 ```
 
 **Output:**
-
-![Output4](output.png)
+![image](https://github.com/user-attachments/assets/143a9a13-3b8d-4af0-bcc6-9308a143819e)
 
 **Question 5**
 ---
--- Paste Question 5 here
+Insert the following customers into the Customers table:
 
+CustomerID  Name         Address     City        ZipCode
+----------  -----------  ----------  ----------  ----------
+302         Laura Croft  456 Elm St  Seattle     98101
+303         Bruce Wayne  789 Oak St  Gotham      10001
 ```sql
--- Paste your SQL code below for Question 5
+Insert  into Customers(CustomerID,Name,Address,City,Zipcode)
+values(302,'Laura Croft','456 Elm St','Seattle',98101),
+(303,'Bruce Wayne','789 Oak St','Gotham',10001);
 ```
 
 **Output:**
-
-![Output5](output.png)
+![image](https://github.com/user-attachments/assets/1af68e0c-c25c-4e1a-aa55-a34a3650e4b7)
 
 **Question 6**
 ---
--- Paste Question 6 here
+Create a table named Products with the following constraints:
 
+ProductID should be the primary key.
+ProductName should be NOT NULL.
+Price is of real datatype and should be greater than 0.
+Stock is of integer datatype and should be greater than or equal to 0.
 ```sql
--- Paste your SQL code below for Question 6
+CREATE TABLE Products (
+ProductID INTEGER PRIMARY KEY,
+ProductName varchar(30) NOT NULL,
+Price REAL CHECK(Price>0),
+Stock INTEGER CHECK(Stock>=0)
+);
 ```
 
 **Output:**
-
-![Output6](output.png)
+![image](https://github.com/user-attachments/assets/4a58a970-a937-4657-9342-b20fd8c51676)
 
 **Question 7**
 ---
--- Paste Question 7 here
+Create a table named Tasks with the following columns:
 
+TaskID as INTEGER
+TaskName as TEXT
+DueDate as DATE
 ```sql
--- Paste your SQL code below for Question 7
+CREATE TABLE Tasks(
+TaskID INTEGER,
+TaskName TEXT,
+DueDate DATE
+);
 ```
 
 **Output:**
-
-![Output7](output.png)
+![image](https://github.com/user-attachments/assets/f56ab494-b2c5-4243-815c-6fe9fa5548c0)
 
 **Question 8**
 ---
--- Paste Question 8 here
+Insert all products from Discontinued_products into Products.
 
+Table attributes are ProductID, ProductName, Price, Stock
 ```sql
--- Paste your SQL code below for Question 8
+INSERT INTO Products(ProductID,ProductName,Price,Stock)
+SELECT ProductID,ProductName,Price,Stock FROM Discontinued_products;
 ```
 
 **Output:**
+![image](https://github.com/user-attachments/assets/cebcc727-1298-49c3-8ab9-e6c74dc5d74d)
 
-![Output8](output.png)
 
 **Question 9**
 ---
--- Paste Question 9 here
-
+Insert a book with ISBN 978-1234567890, Title Data Science Essentials, Author Jane Doe, Publisher TechBooks, and Year 2024 into the Books table.
 ```sql
--- Paste your SQL code below for Question 9
+INSERT INTO Books(ISBN,Title,Author,Publisher,Year)
+values("978-1234567890","Data Science Essentials","Jane Doe","TechBooks",2024);
 ```
 
 **Output:**
-
-![Output9](output.png)
+![image](https://github.com/user-attachments/assets/d243dff6-8ae6-4a2c-a240-f1c98df39551)
 
 **Question 10**
 ---
--- Paste Question 10 here
+Create a new table named item with the following specifications and constraints:
+item_id as TEXT and as primary key.
+item_desc as TEXT.
+rate as INTEGER.
+icom_id as TEXT with a length of 4.
+icom_id is a foreign key referencing com_id in the company table.
+The foreign key should set NULL on updates and deletes.
+item_desc and rate should not accept NULL.
 
 ```sql
--- Paste your SQL code below for Question 10
+CREATE TABLE item(
+item_id TEXT PRIMARY KEY,
+item_desc TEXT NOT NULL,
+rate INTEGER NOT NULL,
+icom_id TEXT check(length(4)),
+foreign key(icom_id) references company(com_id)
+on update set null
+on delete set null
+
+);
 ```
 
 **Output:**
-
-![Output10](output.png)
-
+![image](https://github.com/user-attachments/assets/9b61a162-6731-47fa-93f2-4a0565d09833)
 
 ## RESULT
 Thus, the SQL queries to implement different types of constraints and DDL commands have been executed successfully.
