@@ -103,7 +103,7 @@ CREATE TABLE Table_Name (
 );
 ```
 
-**Question 1**
+**Question 1 : **
 ---
 Create a table named ProjectAssignments with the following constraints:
 AssignmentID as INTEGER should be the primary key.
@@ -111,8 +111,8 @@ EmployeeID as INTEGER should be a foreign key referencing Employees(EmployeeID).
 ProjectID as INTEGER should be a foreign key referencing Projects(ProjectID).
 AssignmentDate as DATE should be NOT NULL
 
-
-```sql
+## SQL Code:
+```
 CREATE TABLE ProjectAssignments(
 AssignmentID INTEGER PRIMARY KEY,
 EmployeeID integer,
@@ -126,10 +126,10 @@ foreign key(ProjectID) references Projects(ProjectID)
 **Output:**
 ![image](https://github.com/user-attachments/assets/250a93d9-a753-4799-b4a3-fc44cea27114)
 
-**Question 2**
+**Question 2 : **
 ---
 Write a SQL query to Add a new column State as text in the Student_details table.
-
+```
 Sample table: Student_details
 
  cid              name             type   notnull     dflt_value  pk
@@ -139,7 +139,8 @@ Sample table: Student_details
 2                Gender           TEXT   1                       0
 3                Subject          VARCH  0                       0
 4                MARKS            INT (  0                       0
-
+```
+## SQL Code:
 ```sql
 ALTER TABLE Student_details
 ADD column State TEXT;
@@ -148,9 +149,10 @@ ADD column State TEXT;
 **Output:**
 ![image](https://github.com/user-attachments/assets/14dcfcf1-40bc-401b-8649-936a4fce8e27)
 
-**Question 3**
+**Question 3 : **
 ---
 create a table named jobs including columns job_id, job_title, min_salary and max_salary, and make sure that, the default value for job_title is blank and min_salary is 8000 and max_salary is NULL will be entered automatically at the time of insertion if no value assigned for the specified columns.
+## SQL Code:
 ```sql
 create table jobs(
 job_id integer,
@@ -163,11 +165,11 @@ max_salary integer default null
 **Output:**
 ![image](https://github.com/user-attachments/assets/93a950ce-4c39-46f2-979e-aad2c6503e89)
 
-**Question 4**
+**Question 4 : **
 ---
 Write a SQL Query  to add attribute ISBN as varchar(30) and domain_dept as varchar(30) in the table 'books'
 
-
+## SQL Code:
 ```sql
 Alter table books
 Add column ISBN varchar(30) ;
@@ -179,14 +181,16 @@ Add column domain_dept varchar(30);
 **Output:**
 ![image](https://github.com/user-attachments/assets/143a9a13-3b8d-4af0-bcc6-9308a143819e)
 
-**Question 5**
+**Question 5 : **
 ---
 Insert the following customers into the Customers table:
-
+```
 CustomerID  Name         Address     City        ZipCode
 ----------  -----------  ----------  ----------  ----------
 302         Laura Croft  456 Elm St  Seattle     98101
 303         Bruce Wayne  789 Oak St  Gotham      10001
+```
+## SQL Code:
 ```sql
 Insert  into Customers(CustomerID,Name,Address,City,Zipcode)
 values(302,'Laura Croft','456 Elm St','Seattle',98101),
@@ -196,7 +200,7 @@ values(302,'Laura Croft','456 Elm St','Seattle',98101),
 **Output:**
 ![image](https://github.com/user-attachments/assets/1af68e0c-c25c-4e1a-aa55-a34a3650e4b7)
 
-**Question 6**
+**Question 6 : **
 ---
 Create a table named Products with the following constraints:
 
@@ -204,6 +208,7 @@ ProductID should be the primary key.
 ProductName should be NOT NULL.
 Price is of real datatype and should be greater than 0.
 Stock is of integer datatype and should be greater than or equal to 0.
+## SQL Code:
 ```sql
 CREATE TABLE Products (
 ProductID INTEGER PRIMARY KEY,
@@ -216,13 +221,15 @@ Stock INTEGER CHECK(Stock>=0)
 **Output:**
 ![image](https://github.com/user-attachments/assets/4a58a970-a937-4657-9342-b20fd8c51676)
 
-**Question 7**
+**Question 7 : **
 ---
 Create a table named Tasks with the following columns:
-
+```
 TaskID as INTEGER
 TaskName as TEXT
 DueDate as DATE
+```
+## SQL Code:
 ```sql
 CREATE TABLE Tasks(
 TaskID INTEGER,
@@ -234,11 +241,12 @@ DueDate DATE
 **Output:**
 ![image](https://github.com/user-attachments/assets/f56ab494-b2c5-4243-815c-6fe9fa5548c0)
 
-**Question 8**
+**Question 8 : **
 ---
 Insert all products from Discontinued_products into Products.
 
 Table attributes are ProductID, ProductName, Price, Stock
+## SQL Code:
 ```sql
 INSERT INTO Products(ProductID,ProductName,Price,Stock)
 SELECT ProductID,ProductName,Price,Stock FROM Discontinued_products;
@@ -248,9 +256,10 @@ SELECT ProductID,ProductName,Price,Stock FROM Discontinued_products;
 ![image](https://github.com/user-attachments/assets/cebcc727-1298-49c3-8ab9-e6c74dc5d74d)
 
 
-**Question 9**
+**Question 9 : **
 ---
 Insert a book with ISBN 978-1234567890, Title Data Science Essentials, Author Jane Doe, Publisher TechBooks, and Year 2024 into the Books table.
+## SQL Code:
 ```sql
 INSERT INTO Books(ISBN,Title,Author,Publisher,Year)
 values("978-1234567890","Data Science Essentials","Jane Doe","TechBooks",2024);
@@ -259,7 +268,7 @@ values("978-1234567890","Data Science Essentials","Jane Doe","TechBooks",2024);
 **Output:**
 ![image](https://github.com/user-attachments/assets/d243dff6-8ae6-4a2c-a240-f1c98df39551)
 
-**Question 10**
+**Question 10 : **
 ---
 Create a new table named item with the following specifications and constraints:
 item_id as TEXT and as primary key.
@@ -269,7 +278,7 @@ icom_id as TEXT with a length of 4.
 icom_id is a foreign key referencing com_id in the company table.
 The foreign key should set NULL on updates and deletes.
 item_desc and rate should not accept NULL.
-
+## SQL Code:
 ```sql
 CREATE TABLE item(
 item_id TEXT PRIMARY KEY,
