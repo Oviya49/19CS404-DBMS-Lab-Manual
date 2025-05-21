@@ -62,6 +62,7 @@ Key Differences:
 **Expected Output:**  
 Square of 6 is 36
 
+## CODE:
 ```
 CREATE OR REPLACE PROCEDURE find_square(p_number IN NUMBER) IS
     v_square NUMBER;
@@ -77,6 +78,7 @@ BEGIN
 END;
 /
 ```
+## OUTPUT:
 ![image](https://github.com/user-attachments/assets/968c2857-4aca-403c-b96e-000da14b79ec)
 
 
@@ -93,6 +95,7 @@ END;
 
 **Expected Output:**  
 Factorial of 5 is 120
+## CODE:
 ```
 SET SERVEROUTPUT ON;
 
@@ -123,11 +126,10 @@ BEGIN
 END;
 /
 ```
-
+## OUTPUT:
 ![image](https://github.com/user-attachments/assets/109f79e4-11b2-4b91-b9ab-aad84ea4c8fc)
 
 
----
 
 ## 3. Write a PL/SQL Procedure to Check Whether a Number is Even or Odd
 
@@ -139,7 +141,7 @@ END;
 
 **Expected Output:**  
 12 is Even
-
+## CODE:
 ```
 SET SERVEROUTPUT ON;
 
@@ -160,9 +162,10 @@ BEGIN
 END;
 /
 ```
+## OUTPUT:
 ![image](https://github.com/user-attachments/assets/0ee8822b-eb8e-434d-992e-f37842e108fa)
 
----
+
 
 ## 4. Write a PL/SQL Function to Return the Reverse of a Number
 
@@ -175,7 +178,7 @@ END;
 
 **Expected Output:**  
 Reversed number of 1234 is 4321
-
+## CODE:
 ```
 CREATE OR REPLACE FUNCTION reverse_number(p_number IN NUMBER)
 RETURN NUMBER IS
@@ -202,10 +205,10 @@ BEGIN
 END;
 /
 ```
-
+## OUTPUT:
 ![image](https://github.com/user-attachments/assets/6e93d4ee-762b-43ea-bd5d-c93e8458e5a0)
 
----
+
 
 ## 5. Write a PL/SQL Procedure to Display the Multiplication Table of a Number
 
@@ -222,7 +225,7 @@ Multiplication table of 5:
 5 x 3 = 15  
 ...  
 5 x 10 = 50
-
+## CODE:
 ```
 CREATE OR REPLACE PROCEDURE print_table(p_number IN NUMBER) IS
 BEGIN
@@ -239,6 +242,7 @@ BEGIN
 END;
 /
 ```
+## OUTPUT:
 ![image](https://github.com/user-attachments/assets/b6279b7d-5144-420e-a774-3fb17fb5bf3d)
 
 ## RESULT
